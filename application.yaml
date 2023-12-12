@@ -12,7 +12,7 @@ spec:
     path: dev   
   destination: 
     #server: http://cluster-test-argo:8001 
-    server: https://test-cluster-dns-nkgnl6iw.hcp.eastus.azmk8s.io:443
+    server: http://test-cluster-dns-nkgnl6iw.hcp.eastus.azmk8s.io
     namespace: default
 
   syncPolicy:
