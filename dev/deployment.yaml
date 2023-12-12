@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: weatherapi
+  namespace: cc-dev
+  labels:
+    app: weatherapidep
+spec:
+  selector:
+    matchLabels:
+      app: weatherapidep
+  template:
+    metadata:
+      labels:
+        app: weatherapidep
+    spec:
+      containers:
+      - name: weatherapidep
+        image: hello-world
+        ports:
+        - containerPort: 80

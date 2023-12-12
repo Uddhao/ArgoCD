@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: akuity1234
+  namespace: akuity
+spec:
+  project: default
+
+  source:
+    repoURL: https://github.com/Uddhao/ArgoCD.git
+    targetRevision: HEAD
+    path: dev   
+  destination: 
+    #server: http://cluster-test-argo:8001 
+    server: https://test-cluster-dns-nkgnl6iw.hcp.eastus.azmk8s.io:443
+    namespace: default
+
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
+
+    automated:
+      selfHeal: true
+      prune: true
