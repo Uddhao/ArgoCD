@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: akuity1234
-  namespace: akuity
+  namespace: argocd
 spec:
   project: default
 
