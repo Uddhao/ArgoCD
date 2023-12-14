@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: weatherapi
-  namespace: argocd
+  name: helloworld
+  namespace: cc-dev
   labels:
-    app: weatherapidep
+    app: helloworlddep
 spec:
   selector:
     matchLabels:
-      app: weatherapidep
+      app: helloworlddep
   template:
     metadata:
       labels:
-        app: weatherapidep
+        app: helloworlddep
     spec:
       containers:
-      - name: weatherapidep
+      - name: helloworlddep
         image: hello-world
         ports:
         - containerPort: 80
