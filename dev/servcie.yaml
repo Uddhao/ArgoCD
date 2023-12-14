@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: weatherapiser
-  namespace: argocd
+  name: helloworldser
+  namespace: cc-dev
 spec:
   selector:
-    app: weatherapidep
+    app: helloworlddep
   ports:
     - name: http
       port: 8098
