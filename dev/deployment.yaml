@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: helloworld
-  namespace: cc-dev
+  namespace: default
   labels:
     app: helloworlddep
 spec:
