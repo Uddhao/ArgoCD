@@ -1,0 +1,35 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  annotations:
+    argocd.argoproj.io/sync-wave: "0"
+  creationTimestamp: null
+  name: upweatherapi
+  namespace: uppoc
+spec:
+  goTemplate: true
+  generators:
+  - list:
+      elements:
+      - cluster: dp
+        url: https://zuscu-d006-b207-aks-d1-atldp-5ze603p5.hcp.centralus.azmk8s.io:443
+  template:
+    metadata:
+      name: '{{.cluster}}-upweatherapi'
+    spec:
+      project: "up-project"
+      source:
+        repoURL: https://github.com/taa-dev-enablement/atl-akuity.git
+        targetRevision: HEAD
+        path: Apps/weatherApi/base/
+      destination:
+        server: '{{.url}}'
+        namespace: uppoc
+      syncPolicy:
+        automated:
+          allowEmpty: true
+          prune: true
+          selfHeal: true
+        syncOptions:
+          - CreateNamespace=true
+          - ApplyOutOfSyncOnly=true
