@@ -1,35 +1,21 @@
 apiVersion: argoproj.io/v1alpha1
-kind: ApplicationSet
+kind: Application
 metadata:
-  annotations:
-    argocd.argoproj.io/sync-wave: "0"
-  creationTimestamp: null
-  name: upweatherapi
-  namespace: uppoc
+  name: uddhao1
 spec:
-  goTemplate: true
-  generators:
-  - list:
-      elements:
-      - cluster: dp
-        url: https://zuscu-d006-b207-aks-d1-atldp-5ze603p5.hcp.centralus.azmk8s.io:443
-  template:
-    metadata:
-      name: '{{.cluster}}-upweatherapi'
-    spec:
-      project: "up-project"
-      source:
-        repoURL: https://github.com/Uddhao/ArgoCD.git
-        targetRevision: HEAD
-        path: dev/
-      destination:
-        server: '{{.url}}'
-        namespace: uppoc
-      syncPolicy:
-        automated:
-          allowEmpty: true
-          prune: true
-          selfHeal: true
-        syncOptions:
-          - CreateNamespace=true
-          - ApplyOutOfSyncOnly=true
+  destination:
+    name: zuscu-d006-b207-aks-d1-atldp
+    namespace: uddhao
+    server: ''
+  source:
+    path: dev
+    repoURL: 'https://github.com/Uddhao/ArgoCD.git'
+    targetRevision: HEAD
+  sources: []
+  project: default
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
+    automated:
+      prune: true
+      selfHeal: true
