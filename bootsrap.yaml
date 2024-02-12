@@ -8,7 +8,7 @@ spec:
     namespace: 'argocd'
   project: default
   source:
-    path: bootstrap/
+    path: bootsrap/
     repoURL: https://github.com/Uddhao/ArgoCD
     directory:
       recurse: true
