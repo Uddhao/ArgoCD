@@ -11,7 +11,7 @@ spec:
   - list:
       elements:
       - cluster: dp
-        url: https://zuscu-d006-b207-aks-d1-atldp-5ze603p5.hcp.centralus.azmk8s.io
+        url: https://zuscu-d006-b207-aks-d1-atldp-5ze603p5.hcp.centralus.azmk8s.io:443
   template:
     metadata:
       name: 'upweatherapi'
@@ -22,7 +22,7 @@ spec:
         targetRevision: HEAD
         path: dev
       destination:
-        server: 'https://zuscu-d006-b207-aks-d1-atldp-5ze603p5.hcp.centralus.azmk8s.io'
+        server: 'https://zuscu-d006-b207-aks-d1-atldp-5ze603p5.hcp.centralus.azmk8s.io:443'
         namespace: 'uddhao'
       syncPolicy:
         automated:
