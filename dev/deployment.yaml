@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: helloworld
-  namespace: default
+  namespace: uppoc1
   labels:
     app: helloworlddep
 spec:
