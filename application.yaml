@@ -2,7 +2,6 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: akuitytest
-  namespace: uppoc1
 spec:
   project: default
 
@@ -14,8 +13,7 @@ spec:
     #server: http://cluster-test-argo:8001 
     #server: http://test-cluster-dns-nkgnl6iw.hcp.eastus.azmk8s.io
     #server: https://kubernetes.default.svc
-    server: https://zuscu-d006-b207-aks-d1-atldp-5ze603p5.hcp.centralus.azmk8s.io:443
-    namespace: uppoc1
+    name: zuscu-d006-b207-aks-d1-atldp
 
   syncPolicy:
     syncOptions:
