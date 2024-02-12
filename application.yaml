@@ -14,6 +14,7 @@ spec:
     #server: http://test-cluster-dns-nkgnl6iw.hcp.eastus.azmk8s.io
     #server: https://kubernetes.default.svc
     name: zuscu-d006-b207-aks-d1-atldp
+    namespace: uddhao
 
   syncPolicy:
     syncOptions:
