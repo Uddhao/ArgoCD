@@ -22,7 +22,8 @@ spec:
         targetRevision: HEAD
         path: dev
       destination:
-        server: 'https://zuscu-d006-b207-aks-d1-atldp-5ze603p5.hcp.centralus.azmk8s.io:443'
+        name: 'zuscu-d006-b207-aks-d1-atldp'
+        #server: 'https://zuscu-d006-b207-aks-d1-atldp-5ze603p5.hcp.centralus.azmk8s.io:443'
         namespace: 'uddhao'
       syncPolicy:
         automated:
