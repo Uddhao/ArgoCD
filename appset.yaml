@@ -19,9 +19,9 @@ spec:
     spec:
       project: "up-project"
       source:
-        repoURL: https://github.com/taa-dev-enablement/atl-akuity.git
+        repoURL: https://github.com/Uddhao/ArgoCD.git
         targetRevision: HEAD
-        path: Apps/weatherApi/base/
+        path: dev/
       destination:
         server: '{{.url}}'
         namespace: uppoc
