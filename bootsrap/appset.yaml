@@ -4,7 +4,7 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "0"
   creationTimestamp: null
-  name: upweatherapi
+  name: upweatherapi1
 spec:
   goTemplate: true
   generators:
@@ -14,7 +14,7 @@ spec:
         url: https://zuscu-d006-b207-aks-d1-atldp-5ze603p5.hcp.centralus.azmk8s.io:443
   template:
     metadata:
-      name: 'upweatherapi'
+      name: 'upweatherapi1'
     spec:
       project: default
       source:
