@@ -10,7 +10,7 @@ spec:
   generators:
   - list:
       elements:
-      - cluster: dp
+      - cluster: zuscu-d006-b207-aks-d1-atldp
         url: https://zuscu-d006-b207-aks-d1-atldp-5ze603p5.hcp.centralus.azmk8s.io:443
   template:
     metadata:
@@ -22,7 +22,7 @@ spec:
         targetRevision: HEAD
         path: dev
       destination:
-        name: 'zuscu-d006-b207-aks-d1-atldp'
+        name: {{.cluster}}
         #server: 'https://zuscu-d006-b207-aks-d1-atldp-5ze603p5.hcp.centralus.azmk8s.io:443'
         namespace: 'uddhao'
       syncPolicy:
